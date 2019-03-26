@@ -19,3 +19,6 @@ fi
 
 echo "Setting tmux config"
 ln -sf `realpath tmux/tmux.conf` ~/.tmux.conf
+
+echo "Setting ctags config"
+ln -sf `realpath ctags/ctags.conf` ~/.ctags
