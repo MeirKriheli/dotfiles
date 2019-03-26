@@ -13,5 +13,10 @@ Clone the repo to a direcory (assuming `~/.dotfiles` from now on):
 
 Run install.sh passing the wanted color scheme:
 
-    cd ~/.dotfiles/
+    cd ~/.dotfiles
     ./install.sh gruvbox
+
+Will install:
+
+* A dircolors config, based on the color scheme you've passed to the script
+* Tmux config with tpm
