@@ -22,3 +22,10 @@ ln -sf `realpath tmux/tmux.conf` ~/.tmux.conf
 
 echo "Setting ctags config"
 ln -sf `realpath ctags/ctags.conf` ~/.ctags
+
+
+echo "Setting zsh antibody plugins"
+antibody bundle < `realpath antibody/zsh_plugins.txt` > ~/.zsh_plugins.sh
+
+echo -e "\n=====================\n       Done\n====================="
+echo -e "Ensure you have in your ~/.zshrc:\n\nsource ~/.zsh_plugins.sh"

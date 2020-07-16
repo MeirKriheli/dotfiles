@@ -21,3 +21,4 @@ Will install:
 * A dircolors config, based on the color scheme you've passed to the script
 * Tmux config with tpm
 * Ctags config
+* antibody zsh_plugins.txt
