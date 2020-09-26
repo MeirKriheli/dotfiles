@@ -34,7 +34,7 @@ for x in "${config_dirs[@]}"; do
 done
 
 echo "Copying .profile"
-ln -sf `realpath profile/profile` ~/.profile
+ln -nsf `realpath profile/profile` ~/.profile
 
 echo -e "\n=====================\n       Done\n====================="
 echo -e "Ensure you have in your ~/.zshrc:\n\nsource ~/.zsh_plugins.sh"
