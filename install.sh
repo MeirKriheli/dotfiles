@@ -27,5 +27,11 @@ ln -sf `realpath ctags/ctags.conf` ~/.ctags
 echo "Setting zsh antibody plugins"
 antibody bundle < `realpath antibody/zsh_plugins.txt` > ~/.zsh_plugins.sh
 
+config_dirs=( alacritty mako sway waybar )
+for x in "${config_dirs[@]}"; do
+    echo "Setting $x config"
+    ln -sf `realpath $x` ~/.config/$x
+done
+
 echo -e "\n=====================\n       Done\n====================="
 echo -e "Ensure you have in your ~/.zshrc:\n\nsource ~/.zsh_plugins.sh"

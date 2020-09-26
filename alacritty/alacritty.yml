@@ -1,0 +1,54 @@
+font:
+
+  normal:
+    family: mononoki
+    style: Regular
+
+  bold:
+    family: monospace
+    style: Bold
+
+  italic:
+    family: monospace
+    style: Italic
+
+  bold_italic:
+    family: monospace
+    style: BoldItalic
+
+  size: 12
+  offset:
+    x: 0
+    y: 3
+
+# material
+colors:
+  # Default colors
+  primary:
+    # background: '#1e282c'
+    background: '#000000'
+    foreground: '#c3c7d1'
+
+  # Normal colors
+  normal:
+    black:   '#073641'
+    red:     '#eb606b'
+    green:   '#c3e88d'
+    yellow:  '#f7eb95'
+    blue:    '#80cbc3'
+    magenta: '#ff2490'
+    cyan:    '#aeddff'
+    white:   '#ffffff'
+
+  # Bright colors
+  bright:
+    black:   '#002b36'
+    red:     '#eb606b'
+    green:   '#c3e88d'
+    yellow:  '#f7eb95'
+    blue:    '#7dc6bf'
+    magenta: '#6c71c3'
+    cyan:    '#34434d'
+    white:   '#ffffff'
+
+background_opacity: 0.95

@@ -1,8 +1,11 @@
 # My Dotfiles
 
-A place for various dotfiles I have, excluding
-[Neovim](https://github.com/MeirKriheli/dotneovim) and
-[Vim](https://github.com/MeirKriheli/dotvim) which have their own repositories.
+A place for various dotfiles I have, excluding:
+
+* [Neovim](https://github.com/MeirKriheli/dotneovim)
+* [Vim](https://github.com/MeirKriheli/dotvim)
+
+which have their own repositories.
 
 
 ## Install
@@ -16,9 +19,13 @@ Run install.sh passing the wanted color scheme:
     cd ~/.dotfiles
     ./install.sh gruvbox
 
-Will install:
+Will install configs for:
 
-* A dircolors config, based on the color scheme you've passed to the script
-* Tmux config with tpm
-* Ctags config
-* antibody zsh_plugins.txt
+* dircolors, based on the color scheme you've passed to the script
+* Tmux with tpm
+* Ctags
+* [Antibody](https://getantibody.github.io/) - ZSH plugin manager
+* [Sway](https://swaywm.org/) - Wayland Window Manager
+* [Waybar](https://github.com/Alexays/Waybar) Highly customizable Wayland bar for Sway and Wlroots based compositors
+* [mako](https://github.com/emersion/mako) - A lightweight notification daemon for Wayland
+* [Alacritty](https://github.com/alacritty/alacritty) - Fsstest terminal emulator
