@@ -27,6 +27,7 @@
     ],
     "modules-right": [
         /* "network", */
+        "idle_inhibitor",
         "pulseaudio",
         "memory",
         "cpu",
@@ -171,7 +172,14 @@
     "tray": {
         "icon-size": 21,
         "spacing": 10
-    }
+    },
 
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
 }
 
