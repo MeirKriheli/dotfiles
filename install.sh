@@ -30,7 +30,7 @@ antibody bundle < `realpath antibody/zsh_plugins.txt` > ~/.zsh_plugins.sh
 config_dirs=( alacritty mako sway waybar )
 for x in "${config_dirs[@]}"; do
     echo "Setting $x config"
-    ln -sf `realpath $x` ~/.config/$x
+    ln -nsf `realpath $x` ~/.config/$x
 done
 
 echo "Copying .profile"
