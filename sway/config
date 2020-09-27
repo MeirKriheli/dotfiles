@@ -321,5 +321,6 @@ bindsym $mod+space exec "pkill --signal SIGRTMIN+1 waybar"
 
 # use swaynagmode for keyboard support with swaynag
 swaynag_command $nag -R
+focus_follows_mouse no
 
 include /etc/sway/config.d/*
