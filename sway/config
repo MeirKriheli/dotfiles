@@ -20,6 +20,13 @@ set $term alacritty
 # on the original workspace that the command was run on.
 set $menu swaymsg exec -- rofi -show drun -show-icons
 
+set {
+  $nag         exec swaynagmode
+  $nag_exit    $nag --exit
+  $nag_confirm $nag --confirm
+  $nag_select  $nag --select
+}
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -84,7 +91,7 @@ exec swayidle -w \
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e $nag -t "warning" -m "Exit Sway?" -b "Exit" "swaymsg exit" -b "Reload" "swaymsg reload"
 #
 # Moving around:
 #
@@ -259,7 +266,26 @@ mode $power_mode {
     bindsym Escape    mode "default"
 }
 
+mode "nag" {
+    bindsym {
+        Ctrl+d    mode "default"
 
+            Ctrl+c    $nag_exit
+            q         $nag_exit
+            Escape    $nag_exit
+
+            Return    $nag_confirm
+
+            Tab       $nag_select prev
+            Shift+Tab $nag_select next
+
+            Left      $nag_select next
+            Right     $nag_select prev
+
+            Up        $nag_select next
+            Down      $nag_select prev
+    }
+}
 input * {
     xkb_layout "us,il(lyx)"
     # xkb_variant "colemak,,typewriter"
@@ -279,5 +305,9 @@ exec nm-applet --indicator
 exec polychromatic-tray-applet
 exec_always --no-startup-id autotiling
 bindsym $mod+space exec "pkill --signal SIGRTMIN+1 waybar"
+
+
+# use swaynagmode for keyboard support with swaynag
+swaynag_command $nag -R
 
 include /etc/sway/config.d/*
