@@ -306,10 +306,16 @@ for_window [window_role="bubble"] floating enable
 for_window [window_role="dialog"] floating enable
 for_window [window_type="dialog"] floating enable
 
-exec mako
-exec nm-applet --indicator
+# startup applications
+
+exec --no-startup-id mako
+exec --no-startup-id nm-applet --indicator
 exec polychromatic-tray-applet
 exec_always --no-startup-id autotiling
+exec_always killall pulseaudio
+exec_always sh -c "pulseaudio --daemonize"
+
+
 bindsym $mod+space exec "pkill --signal SIGRTMIN+1 waybar"
 
 
