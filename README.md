@@ -26,6 +26,33 @@ Will install configs for:
 * Ctags
 * [Antibody](https://getantibody.github.io/) - ZSH plugin manager
 * [Sway](https://swaywm.org/) - Wayland Window Manager
-* [Waybar](https://github.com/Alexays/Waybar) Highly customizable Wayland bar for Sway and Wlroots based compositors
+* [Waybar](https://github.com/Alexays/Waybar) Highly customizable Wayland bar for Sway and
+  Wlroots based compositors
 * [mako](https://github.com/emersion/mako) - A lightweight notification daemon for Wayland
-* [Alacritty](https://github.com/alacritty/alacritty) - Fsstest terminal emulator
+* [Alacritty](https://github.com/alacritty/alacritty) - Fastest terminal emulator
+
+
+## Arch and AUR packages for sway
+
+* alacritty
+* autotiling-git
+* grim
+* kanshi
+* mako
+* network-manager-applet
+* otf-font-awesome
+* pavucontrol
+* playerctl
+* rofi-lbonn-wayland-git
+* slurp
+* swappy
+* sway
+* swaybg
+* swaybg
+* swayidle
+* swaylock
+* swaylock-effects-git
+* swaynagmode
+* waybar
+* wdisplays
+* wlroots
