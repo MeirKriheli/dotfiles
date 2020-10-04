@@ -18,7 +18,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu swaymsg exec -- rofi -show drun -show-icons
+set $menu swaymsg exec -- rofi -show drun -show-icons -theme solarized 
 
 set {
   $nag         exec swaynagmode
@@ -45,8 +45,8 @@ output eDP-1 pos 3840 1640
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 120 'swaylock -f -c 000000' \
-         timeout 240 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -312,8 +312,7 @@ exec --no-startup-id mako
 exec --no-startup-id nm-applet --indicator
 exec polychromatic-tray-applet
 exec_always --no-startup-id autotiling
-exec_always killall pulseaudio
-exec_always sh -c "pulseaudio --daemonize"
+exec_always pulseaudio -k
 
 
 bindsym $mod+space exec "pkill --signal SIGRTMIN+1 waybar"
