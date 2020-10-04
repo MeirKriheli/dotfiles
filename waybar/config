@@ -20,10 +20,12 @@
 
     "modules-left": [
         "sway/workspaces",
-        "sway/mode"
+        "sway/mode",
+        "sway/window"
     ],
     "modules-center": [
-        "sway/window"
+        "clock#date",
+        "clock#time"
     ],
     "modules-right": [
         /* "network", */
@@ -31,12 +33,10 @@
         "pulseaudio",
         "memory",
         "cpu",
-        "temperature",
+        // "temperature",
         "custom/keyboard-layout",
         "battery",
-        "tray",
-        "clock#date",
-        "clock#time"
+        "tray"
     ],
 
 
@@ -73,7 +73,7 @@
     "clock#date": {
       "interval": 10,
       "format": "  {:%e %b %Y}", // Icon: calendar-alt
-      "tooltip-format": "{:%e %B %Y}"
+      "tooltip-format": "<tt>{calendar}</tt>"
     },
 
     "cpu": {
