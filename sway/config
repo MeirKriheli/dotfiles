@@ -290,6 +290,7 @@ input * {
     xkb_layout "us,il(lyx)"
     # xkb_variant "colemak,,typewriter"
     xkb_options "grp:win_space_toggle"
+    tap enabled
 }
 
 # gaps inner 4
