@@ -1,0 +1,4 @@
+# Connect to and initalize gnome-keyring-daemon when in sway session
+if [ "$DESKTOP_SESSION" = "sway" ]; then
+    export $(gnome-keyring-daemon --start)
+fi

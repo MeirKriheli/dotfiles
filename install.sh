@@ -36,5 +36,8 @@ done
 echo "Copying .profile"
 ln -nsf `realpath profile/profile` ~/.profile
 
+echo "Copying .zprofile"
+ln -nsf `realpath profile/zprofile` ~/.zprofile
+
 echo -e "\n=====================\n       Done\n====================="
 echo -e "Ensure you have in your ~/.zshrc:\n\nsource ~/.zsh_plugins.sh"
