@@ -32,13 +32,9 @@ set {
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output DP-3 resolution 3840x2160@29.969999Hz pos 0 0
-output eDP-1 pos 3840 1640
+#
+# Actual configure is set by kanshi
 
 ### Idle configuration
 #
@@ -287,6 +283,11 @@ mode "nag" {
             Down      $nag_select prev
     }
 }
+
+set $laptop eDP-1
+bindswitch lid:on output $laptop disable
+bindswitch lid:off output $laptop enable
+
 input * {
     xkb_layout "us,il(lyx)"
     # xkb_variant "colemak,,typewriter"
@@ -315,6 +316,7 @@ exec --no-startup-id nm-applet --indicator
 exec polychromatic-tray-applet
 exec_always --no-startup-id autotiling
 exec_always pulseaudio -k
+exec_always pkill kanshi; exec kanshi
 
 
 bindsym $mod+space exec "pkill --signal SIGRTMIN+1 waybar"
