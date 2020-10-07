@@ -36,6 +36,7 @@ Will install configs for:
 
 * alacritty
 * autotiling-git
+* brightnessctl
 * grim
 * kanshi
 * mako
