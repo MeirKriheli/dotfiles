@@ -177,19 +177,6 @@ bindsym Alt+Print exec grim -g "$(slurp -b '#AFAFAFAF' -c '#FF4F3FAF' -s '#00000
     bindsym $mod+minus scratchpad show
 
 
-    # Special media keys
-    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-    bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-    bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-    bindsym XF86AudioPlay exec playerctl play-pause
-    bindsym XF86AudioNext exec playerctl next
-    bindsym XF86AudioPrev exec playerctl previous
-
-    # Allow a keybinding to be executed while the lockscreen is active
-    bindsym --locked XF86AudioPlay exec playerctl play-pause
 
 
 # Resizing containers:
@@ -308,3 +295,4 @@ focus_follows_mouse no
 
 include /etc/sway/config.d/*
 include ./input
+include ./media-keys
