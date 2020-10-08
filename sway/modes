@@ -1,0 +1,66 @@
+### Custom modes configuration and binding
+#
+# Resizing containers:
+#
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym --to-code $left resize shrink width 10px
+    bindsym --to-code $down resize grow height 10px
+    bindsym --to-code $up resize shrink height 10px
+    bindsym --to-code $right resize grow width 10px
+
+    # Ditto, with arrow keys
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym --to-code $mod+r mode "resize"
+
+#
+# Power mode for poweroff, reboot, suspend, lock, etc.
+#
+set $power_mode "power"
+mode $power_mode {
+    bindsym --to-code p         exec systemctl poweroff
+    bindsym --to-code r         exec systemctl reboot
+    bindsym --to-code l         exec swaylock -i ~/Pictures/Wallpapers/boston-celtics-wallpaper-hd-31.jpg --effect-blur 7x5 --effect-vignette 0.5:0.5
+    bindsym --to-code q         exec --no-startup-id i3-msg exit, mode "default"
+    # bindsym --to-code h         exec systemctl hibernate
+    bindsym --to-code s         exec systemctl suspend, mode "default"
+
+    bindsym Return    mode "default"
+    bindsym Escape    mode "default"
+}
+bindsym --to-code $mod+Shift+q mode $power_mode
+
+#
+# Mode for swaynagmode - swaynag with keyboard support
+#
+mode "nag" {
+    bindsym {
+        Ctrl+d    mode "default"
+
+        Ctrl+c    $nag_exit
+        q         $nag_exit
+        Escape    $nag_exit
+
+        Return    $nag_confirm
+
+        Tab       $nag_select prev
+        Shift+Tab $nag_select next
+
+        Left      $nag_select next
+        Right     $nag_select prev
+
+        Up        $nag_select next
+        Down      $nag_select prev
+    }
+}
