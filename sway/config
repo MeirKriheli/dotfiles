@@ -153,16 +153,6 @@ exec swayidle -w \
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
-# screenshot
-
-## Screenshot // Screenshot active display
-bindsym Print exec grim -o "$(swaymsg --type get_outputs --raw | jq -r '.[] | select(.focused) | .name')" - | swappy -f -
-
-## Screenshot // Screenshot current window
-bindsym Shift+Print exec swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp | grim -g - - | swappy -f -
-
-## Screenshot // Screenshot selected region
-bindsym Alt+Print exec grim -g "$(slurp -b '#AFAFAFAF' -c '#FF4F3FAF' -s '#00000000' -w 3 -d)" - | swappy -f -
 
 # Scratchpad:
 #
@@ -296,3 +286,4 @@ focus_follows_mouse no
 include /etc/sway/config.d/*
 include ./input
 include ./media-keys
+include ./screenshot
