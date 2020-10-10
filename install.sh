@@ -27,7 +27,7 @@ ln -sf `realpath ctags/ctags.conf` ~/.ctags
 echo "Setting zsh antibody plugins"
 antibody bundle < `realpath antibody/zsh_plugins.txt` > ~/.zsh_plugins.sh
 
-config_dirs=( alacritty mako sway waybar kanshi )
+config_dirs=( alacritty mako sway waybar kanshi rofi )
 for x in "${config_dirs[@]}"; do
     echo "Setting $x config"
     ln -nsf `realpath $x` ~/.config/$x
