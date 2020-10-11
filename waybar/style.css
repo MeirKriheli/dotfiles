@@ -49,7 +49,7 @@
 
 /* The whole bar */
 #waybar {
-    background: #323232;
+    background: rgba(50, 50, 50, 0.5);
     color: white;
     font-family: Cantarell, Noto Sans, sans-serif;
     font-size: 13px;

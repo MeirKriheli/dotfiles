@@ -1,0 +1,5 @@
+### swaynag configuration
+#
+
+# use swaynagmode for keyboard support with swaynag
+swaynag_command $nag -R

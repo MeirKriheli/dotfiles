@@ -1,0 +1,20 @@
+### Startup applications
+#
+
+# Lightweight notification daemon for Wayland
+exec --no-startup-id mako
+
+# NetworkManager applet
+exec --no-startup-id nm-applet --indicator
+
+# Applet for managing Razer peripherals
+exec polychromatic-tray-applet
+
+# Auto-tiling script
+exec_always --no-startup-id autotiling
+
+# Kill (will restart) PulseAudio
+exec_always pulseaudio -k
+
+# Restart Kanshi for display configuration
+exec_always pkill kanshi; exec kanshi
