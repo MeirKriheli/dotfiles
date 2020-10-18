@@ -7,3 +7,6 @@ for_window [window_type="dialog"] floating enable
 
 # Don't follow nouse for focus
 focus_follows_mouse no
+
+# Windows title font
+font $font
