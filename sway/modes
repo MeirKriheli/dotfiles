@@ -31,7 +31,7 @@ set $power_mode "power"
 mode $power_mode {
     bindsym --to-code p         exec systemctl poweroff
     bindsym --to-code r         exec systemctl reboot
-    bindsym --to-code l         exec swaylock -i ~/Pictures/Wallpapers/boston-celtics-wallpaper-hd-31.jpg --effect-blur 7x5 --effect-vignette 0.5:0.5
+    bindsym --to-code l         exec swaylock -i ~/Pictures/Wallpapers/boston-celtics-wallpaper-hd-31.jpg --effect-blur 7x5 --effect-vignette 0.5:0.5, mode "default"
     bindsym --to-code q         exec --no-startup-id i3-msg exit, mode "default"
     # bindsym --to-code h         exec systemctl hibernate
     bindsym --to-code s         exec systemctl suspend, mode "default"
