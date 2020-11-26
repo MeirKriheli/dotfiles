@@ -21,6 +21,12 @@ font:
     x: 0
     y: 3
 
+
+background_opacity: 0.95
+
+window:
+  decorations: none
+
 # # Colors (Ayu Mirage)
 # colors:
 #   # Default colors
@@ -109,5 +115,3 @@ colors:
 #     magenta: '#6c71c3'
 #     cyan:    '#34434d'
 #     white:   '#ffffff'
-
-background_opacity: 0.95
