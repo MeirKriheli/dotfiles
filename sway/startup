@@ -1,6 +1,8 @@
 ### Startup applications
 #
 
+exec_always ~/.config/sway/import-gsettings
+
 # Lightweight notification daemon for Wayland
 exec --no-startup-id mako
 
@@ -14,7 +16,12 @@ exec polychromatic-tray-applet
 exec_always --no-startup-id autotiling
 
 # Kill (will restart) PulseAudio
-exec_always pulseaudio -k
+# exec_always systemctl --user restart pulseaudio
 
 # Restart Kanshi for display configuration
-exec_always pkill kanshi; exec kanshi
+exec_always pkill kanshi; kanshi
+
+exec redshift -l manual -m wayland -l 32.3336111:34.8577778 -r
+
+# Volume notification daemon
+exec avizo-service
