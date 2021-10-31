@@ -30,7 +30,7 @@ set {
 set $laptop eDP-1
 
 # Wallpaper
-set $wallpaper /home/meir/Pictures/Wallpapers/boston-celtics-wallpaper-hd-31.jpg
+set $wallpaper /usr/share/backgrounds/gnome/Loveles.jpg
 
 # Font for windows
 set $font pango:Cantarell Regular 10
