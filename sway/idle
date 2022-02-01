@@ -13,7 +13,8 @@
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000' \
-         unlock 'pulseaudio -k'
+         timeout 600 'swaylock -f -c 000000' \
+         timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
+         # before-sleep 'swaylock -f -c 000000' \
+         # unlock 'systemctl --user restart pulseaudio'
