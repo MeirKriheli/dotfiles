@@ -1,7 +1,7 @@
 ### Startup applications
 #
 
-exec_always ~/.config/sway/import-gsettings
+#exec_always ~/.config/sway/import-gsettings
 
 # Lightweight notification daemon for Wayland
 exec --no-startup-id mako

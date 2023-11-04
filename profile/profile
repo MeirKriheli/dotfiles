@@ -2,3 +2,4 @@
 if [ "$DESKTOP_SESSION" = "sway" ]; then
     export $(gnome-keyring-daemon --start)
 fi
+source "$HOME/.cargo/env"

@@ -1,21 +1,16 @@
 # Default config for sway
 #
-# Copy this to ~/.config/sway/config and edit it to your liking.
+# Copy ~/.config/sway/config. Read `man 5 sway` for a complete reference.
 #
-# Read `man 5 sway` for a complete reference.
-
-
-
-# gaps inner 4
-# gaps outer 4
-# smart_gaps on
-# default_border pixel 2
-#smart_borders on
-#set $borderwidth 1
-# hide_edge_borders both
+# Arch packages:
+#
+# paru -S sway kanshi mako playerctl avizo
 
 
 include /etc/sway/config.d/*
+
+#exec_always ~/.config/sway/import-gsettings
+
 include ./variables
 include ./keys
 include ./output

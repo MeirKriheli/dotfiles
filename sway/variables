@@ -30,7 +30,7 @@ set {
 set $laptop eDP-1
 
 # Wallpaper
-set $wallpaper /usr/share/backgrounds/gnome/Loveles.jpg
+set $wallpaper ~/Pictures/Wallpapers/DSDC4K_3840x2160.png
 
 # Font for windows
 set $font pango:Cantarell Regular 10

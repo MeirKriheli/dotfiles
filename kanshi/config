@@ -1,13 +1,25 @@
 profile {
-    output "Samsung Electric Company U32J59x HTPK700050" mode 3840x2160@29.969999Hz position 0,0
+    output "Samsung Electric Company U32J59x HTPK700050" mode 3840x2160@30Hz position 0,0
     output eDP-1 position 3840,1640
 }
 
 profile {
-    output "Samsung Electric Company U32J59x HTPK700050" mode 3840x2160@29.969999Hz position 0,0
+    output "Samsung Electric Company U32J59x HTPK700050" mode 3840x2160@30Hz position 0,0
 }
 
 
 profile {
     output eDP-1 position 0,0
+}
+
+profile {
+    output eDP-1 position 0,462
+    output DP-4 position 3840,0
+    output DP-5 position 1920,0
+}
+
+profile {
+    output eDP-1 position 0,462
+    output DP-3 position 3840,0
+    output DP-4 position 1920,0
 }

@@ -101,6 +101,6 @@ focus_follows_mouse no
 # Windows title font
 font $font
 
-gaps inner 4
-gaps outer 4
+gaps inner 8
+gaps outer 8
 smart_gaps on
